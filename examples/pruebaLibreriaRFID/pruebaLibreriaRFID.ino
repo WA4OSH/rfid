@@ -1,3 +1,21 @@
+/**
+* PruebaLibreriaRFID.ino  (Test of RFID Library)
+*
+* Read a card using an mfrc522 reader connected to SPI interface
+* and display its serial number on the console
+*
+* Pin layout should be as follows:
+* Signal     Pin              Pin               Pin
+*            Arduino Uno      Arduino Mega      MFRC522 board
+* ------------------------------------------------------------
+* Reset      9                5                 RST
+* SPI SS     10               53                SDA
+* SPI MOSI   11               51                MOSI
+* SPI MISO   12               50                MISO
+* SPI SCK    13               52                SCK
+*
+*/
+
 #include <SPI.h>
 #include <RFID.h>
 
@@ -31,7 +49,6 @@ void loop()
                         Serial.print(" , ");
 			Serial.print(rfid.serNum[4],DEC);
                         Serial.println(" ");
-                        
                        
             
           }
